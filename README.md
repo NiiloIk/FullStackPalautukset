@@ -5,6 +5,8 @@ Tämä repositorio sisältää tehtävien palautukset Full Stack Open -kurssille
 Tehtävät on jaettu eri osiin, ja jokainen osio sisältää omat alakansionsa.
 
 **Osa 0**
+
+  - [tehtävät](osa0/)
   
 **Osa 1**
   - [Anekdootit](osa1/anekdootit)
