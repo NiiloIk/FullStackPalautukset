@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre class="mermaid">
+        sequenceDiagram
+            participant Browser
+            participant Server
+
+            Note right of Browser: JavaScript koodissa haetaan tekstikentän tieto ja tallennetaan aika milloin se on päivitetty.
+
+            Note right of Browser: JavaScript koodi päivittää listaelementit avaamatta sivua uudelleen.
+            
+            
+            Note right of Browser: Selain lähettää palvelimelle formin tiedot JSON tiedostona.
+            Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+            Server-->>Browser: HTML 201 Created
+            Note right of Browser: Palvelin vastaa, että se on onnistunut.
+           
+            
+  </pre>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>
