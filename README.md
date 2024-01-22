@@ -16,3 +16,9 @@ Tehtävät on jaettu eri osiin, ja jokainen osio sisältää omat alakansionsa.
   - [Notes (ei pakollinen)](osa2/notes)
   - [Puhelinluettelo](osa2/puhelinluettelo)
   - [Maiden tiedot](osa2/maiden_tiedot)
+
+**Osa 3**
+  - Tehty erilliseen repoon: https://github.com/NiiloIk/puhelinluettelo_fullstack
+
+**Osa 4**
+  - [Blogilista](osa4/blogilista)
