@@ -23,4 +23,7 @@ Tehtävät on jaettu eri osiin, ja jokainen osio sisältää omat alakansionsa.
   - Tehty erilliseen repoon: https://github.com/NiiloIk/puhelinluettelo_fullstack
 
 **Osa 4**
-  - [Blogilista](osa4/blogilista)
+  - [Blogilista backend](osa4/blogilista)
+
+**Osa 5**
+  - [Blogilista Frontendin ja yksikkötestien kanssa](osa5)
