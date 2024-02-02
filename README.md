@@ -27,3 +27,8 @@ Tehtävät on jaettu eri osiin, ja jokainen osio sisältää omat alakansionsa.
 
 **Osa 5**
   - [Blogilista Frontendin ja yksikkötestien kanssa](osa5)
+
+**Osa 6**
+  - [Unicafe Redux](osa6/unicafe-redux)
+  - [Redux anecdotes](osa6/redux-anecdotes)
+  - [Query anecdotes](osa6/query-anecdotes)
