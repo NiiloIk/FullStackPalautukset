@@ -1,0 +1,70 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "content": "custom-hooks are awesome!"
+    },
+    {
+      "id": 2,
+      "content": "best feature ever <3"
+    },
+    {
+      "content": "as",
+      "id": 3
+    },
+    {
+      "content": "as",
+      "id": 4
+    },
+    {
+      "content": "as",
+      "id": 5
+    },
+    {
+      "content": "as",
+      "id": 6
+    },
+    {
+      "content": "as",
+      "id": 7
+    },
+    {
+      "content": "asas",
+      "id": 8
+    },
+    {
+      "content": "asas",
+      "id": 9
+    },
+    {
+      "content": "asas",
+      "id": 10
+    },
+    {
+      "content": "asdasd",
+      "id": 11
+    }
+  ],
+  "persons": [
+    {
+      "id": 1,
+      "name": "mluukkai",
+      "number": "040-5483923"
+    },
+    {
+      "id": 2,
+      "name": "hellas",
+      "number": "012-123123"
+    },
+    {
+      "name": "asdasd",
+      "number": "asdasd",
+      "id": 3
+    },
+    {
+      "name": "asdasd",
+      "number": "asdasd",
+      "id": 4
+    }
+  ]
+}
