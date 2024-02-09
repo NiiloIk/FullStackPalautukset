@@ -32,3 +32,9 @@ Tehtävät on jaettu eri osiin, ja jokainen osio sisältää omat alakansionsa.
   - [Unicafe Redux](osa6/unicafe-redux)
   - [Redux anecdotes](osa6/redux-anecdotes)
   - [Query anecdotes](osa6/query-anecdotes)
+
+**Osa 7**
+  - [Updated bloglist with styling and redux](osa7/bloglist-updated)
+  - [Country hook](osa7/country-hook)
+  - [Routed anecdotes](osa7/routed-anecdotes)
+  - [Ultimate hooks](osa7/ultimate-hooks)
