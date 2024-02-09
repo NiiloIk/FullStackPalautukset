@@ -1,20 +1,32 @@
 import { useState } from 'react'
-import InputField from './InputField'
+import { createBlog } from '../reducers/blogReducer'
+import { useDispatch } from 'react-redux'
+import {
+  useNotificationDispatch,
+  changeNotification,
+} from '../reducers/notificationReducer'
+import { Button, Col, Form, Row } from 'react-bootstrap'
 
-const BlogForm = ({ createBlog }) => {
+const BlogForm = ({ blogFormRef }) => {
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [url, setUrl] = useState('')
 
+  const NotificationDispatch = useNotificationDispatch()
+  const dispatch = useDispatch()
+
   const addBlog = event => {
     event.preventDefault()
 
-    createBlog({
-      title,
-      author,
-      url,
-    })
-
+    const blog = { title, author, url }
+    dispatch(createBlog(blog))
+    NotificationDispatch(
+      changeNotification({
+        notification: `a new blog ${blog.title} by ${blog.author}`,
+        isError: false,
+      })
+    )
+    blogFormRef.current.toggleVisibility()
     setTitle('')
     setAuthor('')
     setUrl('')
@@ -24,27 +36,38 @@ const BlogForm = ({ createBlog }) => {
     <div className='formDiv'>
       <h2>Create a new blog</h2>
 
-      <form onSubmit={addBlog}>
-        <InputField
-          title='title'
-          value={title}
-          handleChange={event => setTitle(event.target.value)}
-        />
-        <InputField
-          title='author'
-          value={author}
-          handleChange={event => setAuthor(event.target.value)}
-        />
-        <InputField
-          title='url'
-          value={url}
-          handleChange={event => setUrl(event.target.value)}
-        />
-
-        <button id='submitBlogButton' type='submit'>
+      <Form onSubmit={addBlog}>
+        <Form.Group as={Row} className='mb-1'>
+          <Form.Label column sm='1'>Title</Form.Label>
+          <Col>
+            <Form.Control
+              type='text'
+              onChange={event => setTitle(event.target.value)}
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className='mb-1'>
+          <Form.Label column sm='1'>Author</Form.Label>
+          <Col>
+            <Form.Control
+              type='text'
+              onChange={event => setAuthor(event.target.value)}
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className='mb-1'>
+          <Form.Label column sm='1'>Url</Form.Label>
+          <Col>
+            <Form.Control
+              type='text'
+              onChange={event => setUrl(event.target.value)}
+            />
+          </Col>
+        </Form.Group>
+        <Button variant='outline-success' id='submitBlogButton' type='submit'>
           save
-        </button>
-      </form>
+        </Button>
+      </Form>
     </div>
   )
 }

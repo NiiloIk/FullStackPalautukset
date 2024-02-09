@@ -1,29 +1,33 @@
-import { useSelector } from "react-redux"
+import { useEffect } from 'react'
+import {
+  useNotificationDispatch,
+  useNotificationValue,
+  changeNotification,
+} from '../reducers/notificationReducer'
+import { Alert } from 'react-bootstrap'
 
 const Notification = () => {
-
-  const notificationInfo = useSelector(({ notification}) => {
-    return notification
-  })
-
+  const notificationInfo = useNotificationValue()
   const notification = notificationInfo.notification
   const isError = notificationInfo.isError
+  const NotificationDispatch = useNotificationDispatch()
 
-  console.log("In notification", notificationInfo)
+  useEffect(() => {
+    setTimeout(() => {
+      NotificationDispatch(
+        changeNotification({ notification: '', isError: false })
+      )
+    }, 5000)
+  }, [notification])
+
   if (!notification) return null
 
   return (
     <>
-      {notification && isError &&
-        <div className='error'>
-          {notification}
-        </div>
-      }
-      {notification && !isError &&
-        <div className='success'>
-          {notification}
-        </div>
-      }
+      {notification && isError && <Alert variant='danger'>{notification}</Alert>}
+      {notification && !isError && (
+        <Alert variant='success'>{notification}</Alert>
+      )}
     </>
   )
 }
