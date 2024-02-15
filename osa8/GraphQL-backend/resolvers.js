@@ -38,17 +38,21 @@ const resolvers = {
       const books = await Book.find({});
 
       // kirjat ja kirjoittajat haetaan vain kerran.
-      return authors.map((author) => {
-        const bookCount = books.reduce((count, book) => {
-          return book.author.toString() === author.id.toString()
-            ? count + 1
-            : count;
-        }, 0);
+      // Kirjojen kirjoittajat asetetaan olioon,
+      // jonka avain on id ja arvo on kirjoitettujen kirjojen määrä.
+      const bookAuthors = books.reduce((authors, book) => {
+        const id = book.author.toString();
+        authors[id] = (authors[id] || 0) + 1;
+        return authors;
+      }, {});
 
+      return authors.map((author) => {
+        const id = author.id.toString();
+        const bookCount = bookAuthors[id];
         return {
           name: author.name,
           bookCount,
-          id: author.id.toString(),
+          id,
           born: author.born,
         };
       });
