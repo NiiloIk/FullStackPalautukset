@@ -41,3 +41,9 @@ Alhaalla hakemisto, josta näkyy läpi käydyt aiheet.
 
 **Osa 8 GraphQL**
   - [GraphQL server and client](osa8/)
+
+**Osa 9 TypeScript**
+  - [BMI and exercise calculator  (introduction to TypeScript)](osa9/calculators)
+  - [Exercise website (frontend)](osa9/react-TS-exercise)
+  - [Flight diaries website (fullstack)](osa9/flight_diaries)
+  - [Patientor website. Website where the user can save patient data and read through it.](osa9/patientor)
