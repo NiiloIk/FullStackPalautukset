@@ -47,3 +47,6 @@ Alhaalla hakemisto, josta näkyy läpi käydyt aiheet.
   - [Exercise website (frontend)](osa9/react-TS-exercise)
   - [Flight diaries website (fullstack)](osa9/flight_diaries)
   - [Patientor website. Website where the user can save patient data and read through it.](osa9/patientor)
+
+**Osa 10 React Native**
+  - Tehty erilliseen repoon: https://github.com/NiiloIk/React-Native-App/
