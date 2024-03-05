@@ -50,3 +50,8 @@ Alhaalla hakemisto, josta näkyy läpi käydyt aiheet.
 
 **Osa 10 React Native**
   - Tehty erilliseen repoon: https://github.com/NiiloIk/React-Native-App/
+
+**Osa 11 CI/CD**
+  - Tehty kahteen erilliseen repoon. 
+    - Ensimmäinen osio: https://github.com/NiiloIk/full-stack-open-pokedex
+    - Toinen osio: https://github.com/NiiloIk/bloglist-cicd-pipeline
